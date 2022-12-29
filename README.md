@@ -30,10 +30,10 @@
 - Age pour le lycée de 16 à 20 ans
   
 ###Niveau d'études à prendre en compte pour la langue
-    - Faire une choix obligatoire pour le college en LV1
+    - Faire un choix obligatoire pour le college en LV1
        *LV1
 
-    -Faire une choix obligatoire pour le lycee en LV1 Et LV2
+    -Faire un choix obligatoire pour le lycee en LV1 Et LV2
        *LV1
        *LV2
 

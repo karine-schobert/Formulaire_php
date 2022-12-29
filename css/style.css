@@ -36,6 +36,20 @@ h1 {
     background: #dbe29c;
     padding: 2em;
 }
+.titre-inscription{
+    color: brown;
+}
+.titre-Etablissement
+{
+    color:blue;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2,
+h3{
+ color:green;
+}
+   
 
 form {
     display: flex;
@@ -53,6 +67,7 @@ form {
 #age {
     width: 15em;
 }
+
 
 label,
 input,

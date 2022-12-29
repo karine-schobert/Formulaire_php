@@ -18,38 +18,38 @@
                     <h2 class="titre-inscription">Groupe scolaire KS primaire-college-lyçée</h2>
 
                     <form action="" method="POST">
-
+<!-- 
                         <label for="lastname">Nom</label>
                         <input type="text" name="lastname" id="lastname" required>
 
                         <label for="firstname">Prénom</label>
-                        <input type="text" name="firstname" id="firstname" required > 
+                        <input type="text" name="firstname" id="firstname" required > - -->
 
                         <label for="age">Âge</label>
                         <input type="number" name="age" id="age" required >
 
                         <fieldset>
-                            <legend>Options langues: <input type="checkbox" id="LV1" name="LV1" value="LV1">
+                            <legend>Options langues: <input type="radio" id="LV1" name="LV1" value="LV1">
                                 <label for="LV1">LV1</label> 
                             </legend>
                             <div>
-                                <input type="checkbox" id="Anglais" name="Option" value="Anglais">
+                                <input type="radio" id="Anglais" name="Anglais" value="Anglais">
                                 <label for="Anglais">Anglais</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Allemand" name="Option" value="Allemand">
+                                <input type="radio" id="Allemand" name="Allemand" value="Allemand">
                                 <label for="Allemand">Allemand</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Espagnole" name="Option" value="Espagnole">
+                                <input type="radio" id="Espagnole" name="Espagnole" value="Espagnole">
                                 <label for="Espagnole">Espagnole</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Italien" name="Option" value="Italien">
+                                <input type="radio" id="Italien" name="Italien" value="Italien">
                                 <label for="Italien">Italien</label>
                             </div>
                         </fieldset>
-
+<!-- 
                         <fieldset>
                             <legend>Options langues: <input type="checkbox" id="LV2" name="LV2" value="LV2">
                                 <label for="LV2">LV2</label> 
@@ -70,8 +70,8 @@
                                 <input type="checkbox" id="Italien" name="Option" value="Italien">
                                 <label for="Italien">Italien</label>
                             </div>
-                        </fieldset>
-
+                        </fieldset> -->
+<!-- 
                         <fieldset> 
                             <legend>Cantine
                             </legend>
@@ -83,7 +83,7 @@
                                 <input type="checkbox" id="non" name="choix" value="non">
                                 <label for="non">Non</label>
                             </div>
-                        </fieldset>
+                        </fieldset> -->
 
                         <button>Je m'inscris</button>
                     </form>
@@ -145,22 +145,23 @@
                     ?>
                     <h4>ton choix pour LV1 est :</h4>
                     <?php
-                                    if (isset($_POST['LV1'])) {
-                                        if (isset($_POST['Anglais'])) {
-                                            echo $_POST['Anglais'];
-                                        }
-                                        if (isset($_POST['Allemand'])) {
-                                            echo $_POST['Allemand'];
-                                        }
-                                        if (isset($_POST['Espagnole'])) {
-                                            echo $_POST['Espagnole'];
-                                        }
-                                        if (isset($_POST['Italien'])) {
-                                            echo $_POST['Italien'];
-                                        }
-                                    }
-                         // Contenu de la global P_POST
-                        print_r($_POST);             
+                         // verification de la donnee coche a continuer ......
+if (isset($_GET) && !empty($_GET)) {
+    if ($age >=10 && $age <= 15) {
+        $anglais = filter_input(INPUT_POST, 'Anglais');
+        $allemand = filter_input(INPUT_POST, 'Allemand');
+        $espagnole = filter_input(INPUT_POST, 'Espagnole');
+        $italien = filter_input(INPUT_POST, 'Italien');
+
+
+
+        echo "ta langue est $anglais ";
+    }
+}
+                   var_dump($age);
+                   var_dump($anglais);
+                    
+                
                     ?>
 
                     <h4>ton choix pour LV2</h4>
