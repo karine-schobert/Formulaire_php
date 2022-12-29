@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+
+}
+
+body {
+
+    margin: 0;
+    height: 100%;
+    padding: 0
+}
+
+.Container_Formulaire {
+    background: gray;
+    display: flex;
+
+    width: 100%;
+    padding: 5em;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+
+.formulaire-inscription {
+    width: 50%;
+    flex-direction: column;
+    background: #dbe29c;
+    padding: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire-resume {
+    width: 50%;
+    background-color: rgb(217, 198, 230);
+    padding: 2em;
+}
+
+#lastname,
+#firstname,
+#age {
+    width: 15em;
+}
+
+label,
+input,
+fieldset,
+button {
+    margin: 5px;
+}
+
+input {
+    height: 2.5em;
+    border: 2px solid rgb(143, 143, 228);
+    border-radius: 5px;
+}
+
+button {
+    width: 20em;
+    height: 3em;
+    margin-left: 20%;
+    border-radius: 5px;
+    background: #d83a37;
+    color: aliceblue;
+    font-size: 1.4em;
+}
