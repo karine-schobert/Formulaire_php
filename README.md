@@ -37,8 +37,8 @@
        *LV1
        *LV2
 
-###Le choix de la cantine 
-    - Cocher obligatoirement la case : soit OUI soit Non
+### Le choix de la cantine 
+    - Cocher obligatoirement la case : soit OUI soit Non (pas mis en place )
   ---
 
 ### RESULTATS
@@ -49,3 +49,6 @@
 ## Remarques
 
 - debutante en html , css et php
+- Attention il y a un encore un bug lors du choix de la LV1 pour le collegien il faut absolument choisir la LV2
+   pour le moment 
+- J ai ajouter un boutton reset pour le formulaire il ne fonctionne pas pour l'instant 
