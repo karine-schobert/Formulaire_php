@@ -57,19 +57,19 @@
                                 <label for="LV2">LV2</label> 
                             </legend>
                             <div>
-                                <input type="radio" id="Anglais" name="Option" required  value="Anglais">
+                                <input type="radio" id="Anglais" name="Option2" required  value="Anglais">
                                 <label for="Anglais">Anglais</label>
                             </div>
                             <div>
-                                <input type="radio" id="Allemand" name="Option"required  value="Allemand">
+                                <input type="radio" id="Allemand" name="Option2"required  value="Allemand">
                                 <label for="Allemand">Allemand</label>
                             </div>
                             <div>
-                                <input type="radio" id="Espagnole" name="Option" required value="Espagnole">
+                                <input type="radio" id="Espagnole" name="Option2" required value="Espagnole">
                                 <label for="Espagnole">Espagnole</label>
                             </div>
                             <div>
-                                <input type="radio" id="Italien" name="Option" required  value="Italien">
+                                <input type="radio" id="Italien" name="Option2" required  value="Italien">
                                 <label for="Italien">Italien</label>
                             </div>
                         </fieldset> 
@@ -108,7 +108,7 @@
                     <h2>Merci pour votre inscription</h2>
                     <?php
                     //   Verification que le formulaire est bien été soumis  nom prenom age apparition page de droite 
-                    if(isset($_POST)&& ($_POST)){
+                    if(isset($_POST)&& !empty($_POST)){
                         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS);
                         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_SPECIAL_CHARS);
                         $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
@@ -120,7 +120,7 @@
                      <h3>Tu as </h3>
                      <?php
                      //verification de l'age
-                        if (isset($_POST)&& ($_POST)) {
+                        if (isset($_POST)&& !empty($_POST)){
                             $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
                             echo '<span>'.$age .'  ans <pan>';
                             }
@@ -130,7 +130,7 @@
                     <h3>Tu es  :</h3>
                     <?php
                     // verification de l'age pour l'etablissement (primaire, college, lycee)
-                    if(isset($_POST)&& ($_POST)){
+                    if(isset($_POST)&& !empty($_POST)){
                      $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
                         if ($age >=6 && $age <=9){
                             echo "<span> Bienvenu en primaire</span><br>";
@@ -147,9 +147,9 @@
                     ?>
                     <h4>Tu es au college  ta LV1 preferée:</h4>
                     <?php
-                        if(isset($_POST)&& ($_POST)){
+                        if(isset($_POST)&& !empty($_POST)){
                             if ($age >=10 && $age <= 15)
-                            echo "Coche ta LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
+                            echo " LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
                         }  
                                   
                         // var_dump($_POST);
@@ -158,19 +158,22 @@
 
                     <h4>Tu es au lycee choisi ta LV1  et ta LV2 preferée</h4>
                         <?php
-                            if (isset($_POST)&& ($_POST)) {
+                            if (isset($_POST)&& !empty($_POST)){
                                 if ($age >=16 && $age <= 20) {
-                                    echo "Coche ta LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
-                                    echo "ta LV2 Preferee: <span>" . $_POST['Option'] . "</span>";
+                                    echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
+                                    echo "LV2 Preferee: <span>" . $_POST['Option2'] . "</span>";
                                 }
                             }
                             //die();
                     ?> 
                     <h5>Inscription cantine</h5>
 
-                    <section class="answer">
-                    
-                
+                  <form>
+                 <button><input type="reset" value="Réinitialiser le formulaire"></button>
+                                    <?php
+                                     
+                                            ?>           
+                    </form>       
                     </section>
                 </section>
 

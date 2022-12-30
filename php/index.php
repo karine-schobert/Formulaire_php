@@ -28,51 +28,53 @@
                         <label for="age">Âge</label>
                         <input type="number" name="age" id="age" required >
 
+                        <!-- TABLEAU lv1 -->
                         <fieldset>
-                            <legend>Options langues: <input type="checkbox" id="LV1" name="LV1" value="LV1">
+                            <legend>Options langues: <input type="radio" id="LV1" name="LV1" required value="LV1">
                                 <label for="LV1">LV1</label> 
                             </legend>
                             <div>
-                                <input type="checkbox" id="Anglais" name="Option" value="Anglais">
-                                <label for="Anglais">Anglais</label>
+                                <input type="radio" id="Anglais" name="Option" required  value="Anglais">
+                                <label for="radio">Anglais</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Allemand" name="Option" value="Allemand">
+                                <input type="radio" id="Allemand" name="Option" required  value="Allemand">
                                 <label for="Allemand">Allemand</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Espagnole" name="Option" value="Espagnole">
+                                <input type="radio" id="Espagnole" name="Option"required   value="Espagnole">
                                 <label for="Espagnole">Espagnole</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Italien" name="Option" value="Italien">
+                                <input type="radio" id="Italien" name="Option" required  value="Italien">
                                 <label for="Italien">Italien</label>
                             </div>
                         </fieldset>
 
+                            <!-- TABLEAU LV2 -->
                         <fieldset>
-                            <legend>Options langues: <input type="checkbox" id="LV2" name="LV2" value="LV2">
+                            <legend>Options langues: <input type="radio" id="LV2" required  name="LV2" required  value="LV2">
                                 <label for="LV2">LV2</label> 
                             </legend>
                             <div>
-                                <input type="checkbox" id="Anglais" name="Option" value="Anglais">
+                                <input type="radio" id="Anglais" name="Option2" required  value="Anglais">
                                 <label for="Anglais">Anglais</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Allemand" name="Option" value="Allemand">
+                                <input type="radio" id="Allemand" name="Option2"required  value="Allemand">
                                 <label for="Allemand">Allemand</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Espagnole" name="Option" value="Espagnole">
+                                <input type="radio" id="Espagnole" name="Option2" required value="Espagnole">
                                 <label for="Espagnole">Espagnole</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="Italien" name="Option" value="Italien">
+                                <input type="radio" id="Italien" name="Option2" required  value="Italien">
                                 <label for="Italien">Italien</label>
                             </div>
-                        </fieldset>
+                        </fieldset> 
 
-                        <fieldset> 
+                        <!-- <fieldset> 
                             <legend>Cantine
                             </legend>
                             <div>
@@ -83,7 +85,7 @@
                                 <input type="checkbox" id="non" name="choix" value="non">
                                 <label for="non">Non</label>
                             </div>
-                        </fieldset>
+                        </fieldset> -->
 
                         <button>Je m'inscris</button>
                     </form>
@@ -106,11 +108,11 @@
                     <h2>Merci pour votre inscription</h2>
                     <?php
                     //   Verification que le formulaire est bien été soumis  nom prenom age apparition page de droite 
-                    if(isset($_POST)&& ($_POST)){
+                    if(isset($_POST)&& !empty($_POST)){
                         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS);
                         $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_SPECIAL_CHARS);
                         $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
-                        echo '<span>'. $lastname .' '. $firstname . '<pan>';
+                        echo '<span>'. $lastname .' '. $firstname . '<span>';
                     
                     } 
                     // die();
@@ -118,7 +120,7 @@
                      <h3>Tu as </h3>
                      <?php
                      //verification de l'age
-                        if (isset($_POST)&& ($_POST)) {
+                        if (isset($_POST)&& !empty($_POST)){
                             $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
                             echo '<span>'.$age .'  ans <pan>';
                             }
@@ -128,7 +130,7 @@
                     <h3>Tu es  :</h3>
                     <?php
                     // verification de l'age pour l'etablissement (primaire, college, lycee)
-                    if(isset($_POST)&& ($_POST)){
+                    if(isset($_POST)&& !empty($_POST)){
                      $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
                         if ($age >=6 && $age <=9){
                             echo "<span> Bienvenu en primaire</span><br>";
@@ -143,21 +145,29 @@
                     }
                     //  die(); 
                     ?>
-                    <h4>tu es college  ta LV1 preferée:</h4>
+                    <h4>Tu es au college  ta LV1 preferée:</h4>
                     <?php
-                    if(isset($_POST)&& ($_POST)){
-                        $age = filter_input(INPUT_POST,'age', FILTER_SANITIZE_NUMBER_INT);
-                        
-                    }
-                                   
-                         // Contenu de la global P_POST
+                        if(isset($_POST)&& !empty($_POST)){
+                            if ($age >=10 && $age <= 15)
+                            echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
+                        }  
                                   
+                        // var_dump($_POST);
+                        //   ;        
                     ?>
 
-                    <h4>tu es au lycee choisit ta LV2 preferee</h4>
-                    <?php
-
-                    ?>
+                    <h4>Tu es au lycee choisi ta LV1  et ta LV2 preferée</h4>
+                        <?php
+                            if (isset($_POST)&& !empty($_POST)){
+                                if ($age >=16 && $age <= 20) {
+                                    echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
+                                    echo "LV2 Preferee: <span>" . $_POST['Option2'] . "</span>";
+                                }
+                            }
+                            //die();
+                            unset($_POST);
+                            echo $_POST;
+                    ?> 
                     <h5>Inscription cantine</h5>
 
                     <section class="answer">
