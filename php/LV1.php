@@ -61,7 +61,7 @@
                                 <label for="Anglais">Anglais</label>
                             </div>
                             <div>
-                                <input type="radio" id="Allemand" name="Option" value="Allemand">
+                                <input type="radio" id="Allemand" name="Option"required  value="Allemand">
                                 <label for="Allemand">Allemand</label>
                             </div>
                             <div>
@@ -148,7 +148,7 @@
                     <h4>Tu es au college  ta LV1 preferée:</h4>
                     <?php
                         if(isset($_POST)&& ($_POST)){
-                            if ($age >=10 && $age <= 15 )
+                            if ($age >=10 && $age <= 15)
                             echo "Coche ta LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
                         }  
                                   
@@ -157,13 +157,13 @@
                     ?>
 
                     <h4>Tu es au lycee choisi ta LV1  et ta LV2 preferée</h4>
-                     <?php
-                        if(isset($_POST)&& ($_POST)){
-                            if ($age >=16 && $age <= 20 )
-                            echo "ta LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
-                          
-                            echo "ta LV2 Preferee: <span>" . $_POST['Option'] . "</span>";
-                        }
+                        <?php
+                            if (isset($_POST)&& ($_POST)) {
+                                if ($age >=16 && $age <= 20) {
+                                    echo "Coche ta LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
+                                    echo "ta LV2 Preferee: <span>" . $_POST['Option'] . "</span>";
+                                }
+                            }
                             //die();
                     ?> 
                     <h5>Inscription cantine</h5>
