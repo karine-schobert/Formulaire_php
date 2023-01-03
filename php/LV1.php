@@ -169,9 +169,10 @@
                     <h5>Inscription cantine</h5>
 
                   <form>
-                 <button><input type="reset" value="Réinitialiser le formulaire"></button>
+                 
+                 <input class="reset" type="reset" value="Reset">
                                     <?php
-                                     
+                                //    that is the question hihi
                                             ?>           
                     </form>       
                     </section>

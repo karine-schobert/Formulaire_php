@@ -3,7 +3,8 @@
 ##Tecnhiques utilisées pour la creation du formulaire
 
     -css et html pour être sur de la mise en forme du formulaire
-    -création d'une page PHP pour recuperer les données du formulaire
+    -création d'une page index.php pour recuperer les données du formulaire
+    -creation d'une page Lv1.php pour tester le programme apres son bon fontionnement elle sera effacer 
     
 ## OBJECTIFS 
 
@@ -22,21 +23,23 @@
 - Prendre en compte l'inscription a la cantine.
 
 ---
-##INSTRUCTIONS
+## INSTRUCTIONS
 
-###les ages a prendre en compte 
+### les ages a prendre en compte 
 - Age pour la primaire de 6 à 9 ans
 - Age pour le college de 10 à 15 ans
 - Age pour le lycée de 16 à 20 ans
   
-###Niveau d'études à prendre en compte pour la langue
+### Niveau d'études à prendre en compte pour la langue
     - Faire un choix obligatoire pour le college en LV1
        *LV1
 
     -Faire un choix obligatoire pour le lycee en LV1 Et LV2
        *LV1
        *LV2
-
+### Creation d'un boutton reset 
+    - pour effacer le formulaire en cours de CONSTRUCTION...
+     
 ### Le choix de la cantine 
     - Cocher obligatoirement la case : soit OUI soit Non (pas mis en place )
   ---

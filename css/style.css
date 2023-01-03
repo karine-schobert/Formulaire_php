@@ -78,11 +78,14 @@ button {
 
 input {
     height: 2.5em;
+    width: 50px;
     border: 2px solid rgb(143, 143, 228);
     border-radius: 5px;
+    background-color: #d83a37;
 }
 
-button {
+button
+ {
     width: 20em;
     height: 3em;
     margin-left: 20%;
