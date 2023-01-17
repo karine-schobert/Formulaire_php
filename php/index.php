@@ -17,8 +17,8 @@
                     <h1>Inscription dans notre établissement</h1>
                     <h2 class="titre-inscription">Groupe scolaire KS primaire-college-lyçée</h2>
 
-                    <form action="" method="POST">
-
+                    <form action="" method="POST" id="form-inscription">
+                    <!-- document.querySelector('#form-inscription').reset(); -->
                         <label for="lastname">Nom</label>
                         <input type="text" name="lastname" id="lastname" required>
 
@@ -29,9 +29,8 @@
                         <input type="number" name="age" id="age" required >
 
                         <!-- TABLEAU lv1 -->
-                        <fieldset>
-                            <legend>Options langues: <input type="radio" id="LV1" name="LV1" required value="LV1">
-                                <label for="LV1">LV1</label> 
+                        <fieldset id="fieldset-lv1">
+                            <legend>Options langues: LV1 
                             </legend>
                             <div>
                                 <input type="radio" id="Anglais" name="Option" required  value="Anglais">
@@ -52,9 +51,8 @@
                         </fieldset>
 
                             <!-- TABLEAU LV2 -->
-                        <fieldset>
-                            <legend>Options langues: <input type="radio" id="LV2" required  name="LV2" required  value="LV2">
-                                <label for="LV2">LV2</label> 
+                        <fieldset id="fieldset-lv2">
+                            <legend>Options langues: LV2
                             </legend>
                             <div>
                                 <input type="radio" id="Anglais" name="Option2" required  value="Anglais">
@@ -87,7 +85,9 @@
                             </div>
                         </fieldset> -->
 
-                        <button>Je m'inscris</button>
+                        <button>Je m'inscris</button> 
+                          <!-- button  -->
+                    <input class="reset" type="reset" value="reset"> 
                     </form>
 
                 </section>
@@ -145,40 +145,41 @@
                     }
                     //  die(); 
                     ?>
-                    <h4>Tu es au college  ta LV1 preferée:</h4>
+                    
                     <?php
                         if(isset($_POST)&& !empty($_POST)){
-                            if ($age >=10 && $age <= 15)
-                            echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
+                            if ($age >=10 && $age <= 15) {
+                                echo "<h4>Tu es au college  ta LV1 preferée:</h4>";
+                                echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span>";
+                            }
                         }  
                                   
                         // var_dump($_POST);
                         //   ;        
                     ?>
 
-                    <h4>Tu es au lycee choisi ta LV1  et ta LV2 preferée</h4>
+                    
                         <?php
                             if (isset($_POST)&& !empty($_POST)){
                                 if ($age >=16 && $age <= 20) {
-                                    echo "LV1 Preferee: <span>" . $_POST['Option'] . "</span><br>";
-                                    echo "LV2 Preferee: <span>" . $_POST['Option2'] . "</span>";
+                                    echo "<h4>Tu es au lycee choisi ta LV1  et ta LV2 preferée</h4>";
+                                    echo "LV1 Preferee: <span class='colorLv1'>" . $_POST['Option'] . "</span><br>";
+                                    echo "LV2 Preferee: <span class='colorLv2'>" . $_POST['Option2'] . "</span>";
                                 }
                             }
                             //die();
                             unset($_POST);
-                            echo $_POST;
+                            
                     ?> 
                     <h5>Inscription cantine</h5>
 
-                    <section class="answer">
                     
-                
-                    </section>
+
                 </section>
 
             </div>
 
         </main>
     </body>
-
+<script src="../Js/form.js"></script>
 </html>

@@ -98,3 +98,10 @@ button
     color: aliceblue;
     font-size: 1.4em;
 }
+
+.colorLv1{
+    color : Violet;
+}
+.colorLv2{
+    color : Orange;
+}
