@@ -39,6 +39,9 @@
        *LV2
 ### Creation d'un boutton reset 
     - pour effacer le formulaire en cours de CONSTRUCTION...
+### Ajout d'un style
+
+  - ajout du style color  sur le span des réponses lv1 et lv2 en php 
      
 ### Le choix de la cantine 
     - Cocher obligatoirement la case : soit OUI soit Non (pas mis en place )
@@ -54,4 +57,4 @@
 - debutante en html , css et php
 - Attention il y a un encore un bug lors du choix de la LV1 pour le collegien il faut absolument choisir la LV2
    pour le moment 
-- J ai ajouter un boutton reset pour le formulaire il ne fonctionne pas pour l'instant 
+- J ai ajouter un boutton reset pour le formulaire il ne fonctionne pas pour l'instant en regle generale ce n 'est pas utile mais c 'est juste pour l'exercice 

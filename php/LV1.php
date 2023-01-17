@@ -170,10 +170,51 @@
 
                   <form>
                  
-                 <input class="reset" type="reset" value="Reset">
-                                    <?php
-                                //    that is the question hihi
-                                            ?>           
+                  <input class="reset" type="reset" value="reset"> 
+                    <?php
+                    // form = a toutes les reponses rempli prenom ,nom, age, lv1 ou lv2 
+                            
+                    
+
+                        
+                       // si form php est rempli alors ont peux effacer le formulaire si on on s'est trompe 
+                       // form rempli alors on   peut appuyer sur reset pour effacer le formulaire  et le remplir a nouveau index.html
+                    ?>  
+                       <?php 
+                       // mettre une couleur violet a la response span lv1 et lv2 
+                     echo '<span';
+                      // si la variable $_SESSION['login'] existe & non vide :
+                   if(!empty($_SESSION['login']))
+                       echo ' class="black"'; // on affiche la class
+                   echo '>';
+                   ?>
+                   
+                  
+                
+                                   
+                 
+                   </body>
+                   Ou ça si tu veux l'appliquer à plusieurs balises sans te prendre la tête :
+                   
+                
+                   function bkg()
+                   {
+                       // si la variable $_SESSION['login'] existe & non vide :
+                       if(!empty($_SESSION['login']))
+                           echo ' class="black"'; // on affiche la class
+                   }
+                   ?>
+                   <style>
+                   .black
+                   {
+                       background-color:black;
+                   }
+                   </style>
+                   </head>
+                   <body<?php bkg();?>>
+                   </body>
+                    ?> 
+                    
                     </form>       
                     </section>
                 </section>
