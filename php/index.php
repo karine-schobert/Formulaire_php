@@ -19,7 +19,7 @@
                 <h2 class="titre-inscription">Groupe scolaire KS primaire-college-lyçée</h2>
 
                 <form action="" method="POST" id="form-inscription">
-                    <!-- document.querySelector('#form-inscription').reset(); -->
+                   
                     <!-- choix utilisateur -------------------------------------------------------------->
                     <label for="lastname">Nom</label>
                     <input type="text" name="lastname" id="lastname" required>
@@ -73,6 +73,7 @@
                             <label for="Italien">Italien</label>
                         </div>
                     </fieldset>
+                    
                     <!-- choix cantine -------------------------------------------------------------->
                     <fieldset>
                         <legend>Cantine</legend>
@@ -207,6 +208,6 @@
     </main>
 </body>
 <script src="../js/formLv1.js"></script>
-<script src="../js/reset.js"></script>
+<script src="../js/resetForm.js"></script>
 
 </html>

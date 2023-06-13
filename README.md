@@ -1,17 +1,19 @@
-#FORMULAIRE EN PHP
+# FORMULAIRE EN PHP
 ---
-##Tecnhiques utilisées pour la creation du formulaire
+## Techniques utilisées pour la creation du formulaire
 
-    -css et html pour être sur de la mise en forme du formulaire
-    -création d'une page index.php pour recuperer les données du formulaire
-    -creation d'une page Lv1.php pour tester le programme apres son bon fontionnement elle sera effacer 
+- Css et html pour la mise  en forme du formulaire
+- création d'une page index.php pour recuperer les données du formulaire
+- Création des pages js pour la dynamisation du formulaire sur le bouton reset et le fieldset pour le choix des langues.
+
     
 ## OBJECTIFS 
 
 - Revoir la syntaxe PHP
 - Ecrire le script correspondant
 - Utiliser le formulaire 
-- Savoir utiliser les conditions pour executer le traitement des données du   formulaire
+- Savoir utiliser les conditions pour executer le traitement des données du formulaire
+  
 ---
 ## PROBLEMATIQUE
 
@@ -19,41 +21,73 @@
 - Faire apparaitre le nom et prénom de l'enfant.
 - A chaque âge correspond un niveau d'étude (primaire, college, lycee).
 - Prendre en compte l'option langue que pour le college et lycée.
-- Prendre en compte l'inscription a la cantine.
+- Prendre en compte l'inscription a la cantine avec oui ou non .
 
 ---
 ## INSTRUCTIONS
 
 ### les ages a prendre en compte 
+
 - Age pour la primaire de 6 à 9 ans
 - Age pour le college de 10 à 15 ans
 - Age pour le lycée de 16 à 20 ans
   
 ### Niveau d'études à prendre en compte pour la langue
     - Faire un choix obligatoire pour le college en LV1
-       *LV1
+
+     * LV1
 
     -Faire un choix obligatoire pour le lycee en LV1 Et LV2
-       *LV1
-       *LV2
-### Creation d'un boutton reset 
-    - pour effacer le formulaire en cours de CONSTRUCTION...
+      * LV1
+      * LV2
+
+ * [Code-Js-Choix](js/Formlv1.js);
+
+---
+### Le choix de la cantine 
+
+    - Cocher obligatoirement la case : soit OUI soit Non 
+  
+---
+### Creation d'un bouton reset 
+
+    - Effacer le resultat du formulaire au click en mettant en place un événement dans un module 
+
 ### Ajout d'un style
 
-  - ajout du style color  sur le span des réponses lv1 et lv2 en php 
+    - ajout du style color  sur le span des réponses lv1 et lv2 en php 
      
-### Le choix de la cantine 
-    - Cocher obligatoirement la case : soit OUI soit Non (pas mis en place )
-  ---
 
+  ---
 ### RESULTATS
 
     L'affichage des reponses doit s'afficher sur la page:
         Votre inscription .....
 ---
-## Remarques
+# Difficultés rencontrées :
 
-- debutante en html , css et php
-- Attention il y a un encore un bug lors du choix de la LV1 pour le collegien il faut absolument choisir la LV2
-   pour le moment 
-- J ai ajouter un boutton reset pour le formulaire il ne fonctionne pas pour l'instant en regle generale ce n 'est pas utile mais c 'est juste pour l'exercice 
+    - Mise en place du javascript sur le fieldset et le bouton reset 
+    - Mise en place du php pour reccupere les donnees du formulaire et de mettre en place les conditions selon l'âge
+
+
+# Ameliorations futur de ce projet :
+
+    - Ajouter au formulaire les  coordonnées de l'utilisateur 
+    - Message de reussite du remplissage 
+    - Mettre en place un Bdd 
+
+# Mes ressources
+
+    - liens [Javacript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for)
+    - liens [recuperer et manipuler les données des formulaires HTML en PHP](https://waytolearnx.com/2020/01/recuperer-les-donnees-dun-formulaire-en-php.html)
+
+
+# Remarques
+
+- Travail  en pair-programing sur la partie choix de LV1 et Lv2  en js et php 
+
+Merci Bruno pour ton aide 
+
+
+
+
