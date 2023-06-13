@@ -47,7 +47,8 @@ h1 {
 }
 h2,
 h3,
-h4{
+h4,
+h5{
  color:green;
 }
 .span{
@@ -92,6 +93,19 @@ button
  {
     width: 20em;
     height: 3em;
+    margin-left: 20%;
+    border-radius: 5px;
+    background:#2663a79c ;
+    color: aliceblue;
+    font-size: 1.4em;
+}
+
+/*button reset */
+
+.reset{
+    width: 10em;
+    height: 3em;
+    margin-top: 38%;
     margin-left: 20%;
     border-radius: 5px;
     background: #d83a37;

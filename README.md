@@ -11,8 +11,7 @@
 - Revoir la syntaxe PHP
 - Ecrire le script correspondant
 - Utiliser le formulaire 
-- Savoir utiliser les conditions pour executer le traitement des données du 
-  formulaire
+- Savoir utiliser les conditions pour executer le traitement des données du   formulaire
 ---
 ## PROBLEMATIQUE
 
