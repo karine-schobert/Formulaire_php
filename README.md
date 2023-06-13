@@ -63,6 +63,8 @@
 
     L'affichage des reponses doit s'afficher sur la page:
         Votre inscription .....
+  
+  ![image](images/formulaire.png)
 ---
 # Difficultés rencontrées :
 
@@ -74,7 +76,8 @@
 
     - Ajouter au formulaire les  coordonnées de l'utilisateur 
     - Message de reussite du remplissage 
-    - Mettre en place un Bdd 
+    - Mettre en place une Bdd 
+    - Refaire le design
 
 # Mes ressources
 
